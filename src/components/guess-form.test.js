@@ -17,6 +17,11 @@ describe('<GuessForm /> Component', () => {
   });
 
   it('Should reset the input when the form is submitted', () => {
-    
+    const wrapper = mount(<GuessForm />);
+    const input = wrapper.find('input[type="text"]');
+    console.log(input);
+    input.node.value = 10;
+    wrapper.simulate('submit');
+    expect(input.node.value).toEqual('');
   })
 })
