@@ -1,9 +1,9 @@
-import React from 'React';
+import React from 'react';
 import {shallow} from 'enzyme';
 import Game from './game';
 
 describe('<Game /> Component', () => {
-  it('Smoke test', () => {
+it('Smoke test', () => {
     shallow(<Game />);
   })
 })
