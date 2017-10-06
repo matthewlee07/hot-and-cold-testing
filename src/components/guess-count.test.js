@@ -9,6 +9,6 @@ describe('<GuessCount /> Component', () => {
   it('Should return correct guess count', () => {
     const guessCt = 3;
     const wrapper = shallow(<GuessCount count={guessCt} />);
-    expect(wrapper.contains(<p>{`Guess #<span id="count">${guessCt}</span>`}</p>))
+    expect(wrapper.text()).toEqual(`Guess #${guessCt}!`);
   })
 })
